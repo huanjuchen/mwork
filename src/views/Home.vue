@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <el-container v-bind:style="{height:100+'%'}">
+        <el-aside v-bind:style="{height:100+'%',width:220+'px'}" >
+            <!-- 左栏 -->
+            <left-navigation/>
+        </el-aside>
+        <el-container>
+            <el-header>
+                <!-- 顶栏 -->
+<!--                <top-bar />-->
+            </el-header>
+            <el-main>
+                <router-view />
+            </el-main>
+            <el-footer></el-footer>
+        </el-container>
+    </el-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+    import LeftNavigation from "../components/home/LeftNavigation";
+    export default {
+        name: 'Home',
+        components:{
+            "left-navigation":LeftNavigation
+        },
+        computed:{
+        }
+    }
 </script>
+
+<style scoped>
+    .container{
+
+    }
+
+</style>

@@ -51,7 +51,6 @@
             }
         },
         methods: {
-
             doRouteChange(name) {
                 this.$router.push({name: name})
                     .then(() => {

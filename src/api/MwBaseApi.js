@@ -4,6 +4,7 @@ import {Message} from "element-ui"
 import router from "../router";
 import MwStore from "../store/MwStore";
 import AppConfig from "../config/AppConfig";
+import {debug} from "../utils/ConsoleLogUtils"
 
 
 Axios.defaults.timeout = 10000;

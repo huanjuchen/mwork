@@ -1,0 +1,155 @@
+@width100: 100%;
+@width5: 5%;
+@width10: 10%;
+@width12: 12%;
+@width15: 15%;
+@width16: 16%;
+@width18: 18%;
+@width20: 20%;
+@width32: 32%;
+@width30: 30%;
+@heightRow: 32px;
+@heightRowDouble: 64px;
+@height100: 100%;
+@borderStyle: solid 1px #F5F5F5;
+@paddingSize: 5px;
+@headerTextColor: #78909C;
+@plainTextColor: #616161;
+
+@boxWidth: 800px;
+
+
+.proof-box {
+  width: @boxWidth;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: @paddingSize;
+}
+
+.box-item-type1 {
+  display: flex;
+  justify-content: center;
+  height: @heightRow;
+}
+
+.proof-title-text {
+  font-size: medium;
+  font-weight: bolder;
+  padding-top: @paddingSize;
+  padding-bottom: @paddingSize;
+}
+
+.proof-table-box {
+  border: @borderStyle;
+  display: flex;
+  flex-direction: column;
+  width: @width100;
+}
+
+.proof-table-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: @width100;
+}
+
+.proof-table-row {
+  display: flex;
+  justify-content: center;
+  height: @heightRow;
+  width: @width100;
+}
+
+.proof-table-header-text {
+  font-size: medium;
+  font-weight: bold;
+  color: @headerTextColor;
+}
+
+.proof-plain-text {
+  color: @plainTextColor;
+}
+
+.hiddenOver {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.proof-table-double-row {
+  display: flex;
+  justify-content: center;
+  height: @heightRowDouble;
+  width: @width100;
+}
+
+.proof-table-item {
+  border: @borderStyle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: @height100;
+}
+
+.proof-row-item {
+  display: flex;
+  flex-flow: row nowrap;
+  border: @borderStyle;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: @width100;
+}
+
+
+.proof-button-box {
+  width: @width100;
+  display: flex;
+  justify-content: center;
+}
+
+.item32 {
+  width: @width32;
+}
+
+.item16 {
+  width: @width16;
+
+}
+
+.item5 {
+  width: @width5;
+}
+
+.item10 {
+  width: @width10;
+}
+
+.item12 {
+  width: @width12;
+}
+
+.item15 {
+  width: @width15;
+}
+
+.item18 {
+  width: @width18;
+}
+
+.item30 {
+  width: @width30;
+}
+
+.item20 {
+  width: @width20;
+
+}
+
+.item100 {
+  width: @width100;
+}
+

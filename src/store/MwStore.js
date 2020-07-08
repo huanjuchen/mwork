@@ -1,8 +1,6 @@
-import {getStoreData} from "../utils/StoreUtils"
-import {debug} from "../utils/ConsoleLogUtils"
+import {getMwStoreData} from "../utils/StoreUtils"
 
-const backupData = getStoreData();
-debug("getStoreData执行一次");
+const backupData = getMwStoreData();
 
 let obj = {
     tokenId: null,

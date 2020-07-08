@@ -21,7 +21,7 @@
              * 组件初始化
              */
             init() {
-                let tokenId =MwStore.tokenId;
+                let ti = MwStore.tokenId;
                 let rn = MwStore.Login.routeName;
                 MwStore.Login.routeName = null;
 
@@ -30,7 +30,7 @@
                 如果有，跳转回源地址
                  */
 
-                if (tokenId != null && tokenId.length > 0) {
+                if (ti != null && ti.length > 0) {
                     this.$message.warning("已登录，无需重复登录");
 
                     this.routeJump(rn);
@@ -53,10 +53,9 @@
                              */
                             //token_id存入Store
                             // sessionStorage.setItem("token_id", response.data.data.tokenId);
-                            MwStore.tokenId = response.data.tokenId;
+                            MwStore.tokenId = response.data.data.tokenId;
                             //用户信息存入store
                             MwStore.user = response.data.data.user;
-                            debug(JSON.stringify(MwStore));
                             //获取路径并进行路由跳转
                             let routeName = MwStore.Login.routeName;
                             MwStore.Login.routeName = null;
@@ -76,7 +75,9 @@
                     error("路由跳转出现一个错误，组件名: " + name);
                 });
             }
-
+        },
+        mounted() {
+            this.init();
         }
     }
 </script>

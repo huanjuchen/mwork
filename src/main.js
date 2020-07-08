@@ -13,7 +13,10 @@ Vue.use(ElementUI);
 new Vue({
   router,
   render: h => h(App),
+
+
   mounted(){
     window.addEventListener("unload",saveStoreData);
+
   }
 }).$mount('#app')

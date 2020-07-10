@@ -85,16 +85,12 @@
                 orderType: queryStore.proofManagement.orderType,
                 page: queryStore.proofManagement.page,
                 pageSize: queryStore.proofManagement.pageSize,
-
-
-
                 /*
                 中间值
                  */
                 showMode: queryStore.proofManagement.showMode,
                 verifyStatus: queryStore.proofManagement.verifyStatus,
                 monthValue: queryStore.proofManagement.monthValue,
-
                 /*
                 选项
                  */
@@ -170,6 +166,7 @@
                     if (response.data.code === 200) {
                         this.$message.success("创建成功");
                         this.createFormVersion = getTimestamp();
+                        this.createVisible = false;
                         this.refreshList();
                         this.refreshCount();
                     }
@@ -236,8 +233,11 @@
              */
             doReset() {
                 this.rid = null;
-                this.startDate = null;
-                this.endDate = null;
+                queryStore.proofManagement.rid = null;
+                this.startDate = "";
+                queryStore.proofManagement.startDate = "";
+                this.endDate = "";
+                queryStore.proofManagement.endDate = "";
                 this.refreshList();
                 this.refreshCount();
             },
@@ -282,6 +282,8 @@
                 let ym = year + "-" + month;
                 this.startDate = ym + "-01";
                 this.endDate = ym + "-" + lastDay;
+                queryStore.proofManagement.startDate = this.startDate;
+                queryStore.proofManagement.endDate = this.endDate;
                 this.refreshList();
                 this.refreshCount();
             },
@@ -289,9 +291,9 @@
              * 稽核状态条件改变
              */
             verifyStatusChangeEventHandle(val) {
+                this.verify = val;
                 queryStore.proofManagement.verifyStatus = val;
                 queryStore.proofManagement.verify = val;
-                this.verify = val;
                 this.refreshList();
                 this.refreshCount();
             },

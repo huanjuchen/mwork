@@ -22,12 +22,12 @@ let queryStore = {
     },
     proofManagement:{
         rid: null,
-        startDate: null,
-        endDate: null,
+        startDate: "",
+        endDate: "",
         verify: -2,
         orderType: "dateDESC",
         page: 1,
-        pageSize: 7,
+        pageSize: 5,
         showMode: 1,
         verifyStatus: -2,
         monthValue: null

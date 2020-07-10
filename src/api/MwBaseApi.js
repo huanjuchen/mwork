@@ -56,6 +56,7 @@ export function baseApi(url, data = {},
                     Message.error("未登录或登录已过期")
                     MwStore.tokenId = null;
                     MwStore.user = null;
+                    MwStore.Home.LeftNavigation.activeIndex="DashBoard"
                     let tp = router.path;
                     router.push({name: "Login"}).then(() => {
                         MwStore.Login.targetPath = tp;
@@ -73,7 +74,7 @@ export function baseApi(url, data = {},
                 message: "请求出现了一个错误，请稍后重试\t错误代码：" + error.response.status,
                 type: "error"
             });
-
+            resolve(error);
         });
         return promise;
 

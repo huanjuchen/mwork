@@ -118,7 +118,7 @@
                     <div style=" box-sizing:border-box;width: 40%;display: flex;flex-direction: row;flex-flow: nowrap">
                         <div style="width: 100%;height: 100%">
                             &nbsp;&nbsp;附单据 &nbsp;&nbsp;
-                            <el-input size="mini" type="number" :style="{width:35+'%'}"/>
+                            <el-input size="mini" type="number" v-model="proof.invoiceCount" :style="{width:35+'%'}"/>
                             张
                         </div>
                     </div>
